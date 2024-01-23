@@ -1,0 +1,719 @@
+*{
+    padding: 0;
+    margin: 0;
+    /* box-sizing: border-box; */
+}
+body{
+    background: linear-gradient(45deg, #132743, #5585b5);
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+.header{
+    width: 100%;
+    height: 552px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.bgimage{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url(Games/bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.bgimage::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: linear-gradient(90deg, rgba(247, 7, 118, 0.7), black);
+   
+}
+
+.nav-list{
+    width: 10%;
+    height: 700px;
+    background-color:rgba(0, 0, 0, 0.5);
+    opacity: .5;
+    transition: 1.5s;
+    position: fixed;
+    right: 0;
+    z-index: 1;
+    text-align: center;
+
+}
+.header h1{
+    position: absolute;
+    right: 450px;
+    top: 250px;
+    color: white;
+    width: 400px;
+    z-index: 1;
+}
+.header p{
+    position: absolute;
+    right: 320px;
+    top: 300px;
+    color: white;
+    width: 700px;
+    text-align: center;
+    z-index: 1;
+}
+.header span{
+    color:rgba(247, 7, 118, 0.7) ;
+    font-family: cursive;
+}
+.header button{
+    position: absolute;
+    right: 650px;
+    top: 350px;
+    padding: 10px;
+    background-color: transparent;
+    border: 1px solid rgba(247, 7, 118, 0.7);
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    z-index: 1;
+    box-shadow:1px 1px 1px 1px  rgba(247, 7, 118, 0.7);
+    transition: 1s;
+}
+.header button:hover{
+    background-color: rgba(247, 7, 118, 1);
+}
+.nav-list img{
+    width: 40%;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 150px;
+    animation-name: logo;
+    animation-duration: 1s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    transition: 2s;
+    
+}
+.nav-list:hover{
+    width: 27%;
+}
+
+
+@keyframes logo{
+    0% {
+        
+        transform: rotate(180deg);
+      }
+      50% {
+        transform: rotate(90deg);
+      }
+      51% {
+        transform: rotate(90deg);
+      }
+    
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+.nav-list li{
+    padding: 5px;
+    color: white;
+    font-size: 17px;
+    font-family: cursive;
+}
+
+.nav-list a{
+    text-align: center;
+    color: white;
+    margin-left: 20px;
+    
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+    color: rgba(247, 7, 118, 1);
+  }
+  
+  li.dropdown {
+    display: inline-block;
+    margin-left: 12px;
+    
+
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 250px;
+    right: 340px;
+    background-color:rgba(0, 0, 0, 0.5);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    transition: 2s;
+  }
+  
+  .dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    display: block;
+    text-align: center;
+   
+  }
+  
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+    
+  }
+
+.img img{
+    width: 50%;
+
+}
+.cards{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+    
+   
+}
+.cards-head{
+    width: 250px;
+    height: 50px;
+    align-items: center;
+    margin-top: 40px;
+    margin-left: 490px;
+}
+.cards-head h1{
+    color: white;
+    font-family: cursive;
+    border-bottom: 2px solid rgba(247, 7, 118, 0.7);
+    padding-bottom: 10px;
+    text-align: center;
+   
+}
+.card1{
+    width: 25%;
+    height: 500px;
+    background-image: url(Games/ab1.jfif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-right: 50px;
+    margin-top: 50px;
+    position: relative;
+    overflow: hidden;
+}
+.card1::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(247, 7, 118, 0.7), black);
+    top: 50%;
+    transition: 3s;
+}
+.card1::after {
+    content: "";
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(247, 7, 118, 0.7), black);
+    bottom: 50%;
+    transition: 3s;
+  }
+  .card1:hover.card1::after {
+    transform: skewX(90deg);
+  }
+  .card1:hover.card1::before {
+    transform: skewX(90deg);
+  }
+.card2{
+    width: 25%;
+    height: 500px;
+    background-image: url(Games/ab2.jfif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-right: 50px;
+    margin-top: 50px;
+    position: relative;
+    overflow: hidden;
+}
+
+.card2::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(247, 7, 118, 0.7), black);
+    top: 50%;
+    transition: 3s;
+}
+.card2::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(247, 7, 118, 0.7), black);
+    bottom: 50%;
+    transition: 3s;
+  }
+  .card2:hover.card2::after {
+    transform: skewX(90deg);
+  }
+  .card2:hover.card2::before {
+    transform: skewX(90deg);
+  }
+
+.card3{
+    width: 25%;
+    height: 500px;
+    background-image: url(Games/ab3.jfif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-right: 50px;
+    margin-top: 50px;
+    position: relative;
+    overflow: hidden;
+}
+.card3::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(247, 7, 118, 0.7), black);
+    top: 50%;
+    transition: 3s;
+}
+.card3::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(247, 7, 118, 0.7), black);
+    bottom: 50%;
+    transition: 3s;
+  }
+  .card3:hover.card3::after {
+    transform: skewX(90deg);
+  }
+  .card3:hover.card3::before {
+    transform: skewX(90deg);
+  }
+.card4{
+    width: 25%;
+    height: 500px;
+    background-image: url(Games/ab4.jfif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-right: 50px;
+    margin-top: 50px;
+    position: relative;
+    overflow: hidden;
+}
+.card4::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(247, 7, 118, 0.7), black);
+    top: 50%;
+    transition: 3s;
+}
+.card4::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(247, 7, 118, 0.7), black);
+    bottom: 50%;
+    transition: 3s;
+  }
+  .card4:hover.card4::after {
+    transform: skewX(90deg);
+  }
+  .card4:hover.card4::before {
+    transform: skewX(90deg);
+  }
+.card5{
+    width: 25%;
+    height: 500px;
+    background-image: url(Games/ab5.jfif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-right: 50px;
+    margin-top: 50px;
+    position: relative;
+    overflow: hidden;
+}
+.card5::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(247, 7, 118, 0.7), black);
+    top: 50%;
+    transition: 3s;
+}
+.card5::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(247, 7, 118, 0.7), black);
+    bottom: 50%;
+    transition: 3s;
+  }
+  .card5:hover.card5::after {
+    transform: skewX(90deg);
+  }
+  .card5:hover.card5::before {
+    transform: skewX(90deg);
+  }
+.cards-racing{
+    width: 250px;
+    height: 50px;
+    align-items: center;
+    margin-top: 40px;
+    margin-left: 490px;
+}
+.cards2 button{
+  position: absolute;
+  margin-left: 100px;
+  margin-right: auto;
+  margin-top: 200px;
+  background-color: transparent;
+  color: white;
+  font-family: cursive;
+  border: 1px solid black;
+  opacity: 0;
+  position: relative;
+  padding: 10px;
+  border-radius: 10px;
+}
+.cards2 button:hover{
+  opacity: 1;
+  color: white;
+  background-color: rgba(247, 7, 118, 0.7);
+}
+.cards-racing h1{
+    color: white;
+    font-family: cursive;
+    border-bottom: 2px solid rgba(247, 7, 118, 0.7);
+    padding-bottom: 10px;
+    text-align: center;
+   
+}
+.cards2{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+.card2-1{
+    width: 25%;
+    height: 500px;
+    background-image: url(Games/ra2.jfif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-right: 50px;
+    margin-top: 50px;
+    position: relative;
+    overflow: hidden;
+    transition: 2s;
+    
+}
+.card2-1::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(247, 7, 118, 0.7), black);
+  top: 100%;
+  transition: 2s;
+}
+.card2-1::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  /* background: none; */
+  background: linear-gradient(90deg, rgba(247, 7, 118, 0.7), black);
+  /* top: 0; */
+  bottom: 0%;
+  transition: 2s;
+
+}
+.card2-1:hover.card2-1::after {
+  transform: translateY(100%);
+
+}
+.card2-1:hover.card2-1::before {
+  transform: translateY(-100%);
+  
+}
+
+.card2-2{
+    width: 25%;
+    height: 500px;
+    background-image: url(Games/re1.jfif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-right: 50px;
+    margin-top: 50px;
+    position: relative;
+    overflow: hidden;
+    
+    
+}
+.card2-2::before {
+  content: "";
+  position: absolute;
+  right: 0px;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(247, 7, 118, 0.7), black);
+  top: 100%;
+  transition: 3s;
+}
+.card2-2::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(247, 7, 118, 0.7), black);
+  bottom: 0%;
+  transition: 3s;
+}
+.card2-2:hover.card2-2::after {
+  transform: translateY(100%);
+
+}
+.card2-2:hover.card2-2::before {
+  transform: translateY(-100%);
+  
+}
+
+.card2-3{
+    width: 25%;
+    height: 500px;
+    background-image: url(Games/re3.jfif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-right: 50px;
+    margin-top: 50px;
+    position: relative;
+    overflow: hidden;
+}
+.card2-3::before {
+  content: "";
+  position: absolute;
+  right: 0px;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(247, 7, 118, 0.7), black);
+  top: 100%;
+  transition: 3s;
+}
+.card2-3::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(247, 7, 118, 0.7), black);
+  bottom: 0%;
+  transition: 3s;
+}
+.card2-3:hover.card2-3::after {
+  transform: translateY(100%);
+}
+.card2-3:hover.card2-3::before {
+  transform: translateY(-100%);
+}
+.cards-Zomb{
+    width: 250px;
+    height: 50px;
+    align-items: center;
+    margin-top: 40px;
+    margin-left: 490px;
+    
+}
+.cards-Zomb h1{
+    color: white;
+    font-family: cursive;
+    border-bottom: 2px solid rgba(247, 7, 118, 0.7);
+    padding-bottom: 10px;
+    text-align: center;
+   
+}
+.cards-zomb1{
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+.card1-zomb{
+    width: 25%;
+    height: 500px;
+    background-image: url(Games/zo1.jfif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-right: 50px;
+    margin-top: 50px;
+    position: relative;
+    overflow: hidden;
+}
+.card1-zomb::before {
+  content: "";
+  position: absolute;
+  right: 0px;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(247, 7, 118, 0.7), black);
+  top: 100%;
+  transition: 3s;
+}
+.card1-zomb::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(247, 7, 118, 0.7), black);
+  bottom: 0%;
+  transition: 3s;
+}
+.card1-zomb:hover.card1-zomb::after {
+  transform: translateY(100%);
+}
+.card1-zomb:hover.card1-zomb::before {
+  transform: translateY(-100%);
+}
+.card2-zomb{
+    width: 25%;
+    height: 500px;
+    background-image: url(Games/zo2.jfif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-right: 50px;
+    margin-top: 50px;
+    position: relative;
+    overflow: hidden;
+}
+.card2-zomb::before {
+  content: "";
+  position: absolute;
+  right: 0px;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(247, 7, 118, 0.7), black);
+  top: 100%;
+  transition: 3s;
+}
+.card2-zomb::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(247, 7, 118, 0.7), black);
+  bottom: 0%;
+  transition: 3s;
+}
+.card2-zomb:hover.card2-zomb::after {
+  transform: translateY(100%);
+}
+.card2-zomb:hover.card2-zomb::before {
+  transform: translateY(-100%);
+}
+.card3-zomb{
+    width: 25%;
+    height: 500px;
+    background-image: url(Games/zo3.jfif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-right: 50px;
+    margin-top: 50px;
+    position: relative;
+    overflow: hidden;
+}
+.card1-zomb{
+  width: 25%;
+  height: 500px;
+  background-image: url(Games/zo1.jfif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-right: 50px;
+  margin-top: 50px;
+  position: relative;
+  overflow: hidden;
+}
+.card3-zomb::before {
+content: "";
+position: absolute;
+right: 0px;
+width: 100%;
+height: 100%;
+background: linear-gradient(90deg, rgba(247, 7, 118, 0.7), black);
+top: 100%;
+transition: 3s;
+}
+.card3-zomb::after {
+content: "";
+position: absolute;
+right: 0;
+width: 100%;
+height: 100%;
+background: linear-gradient(90deg, rgba(247, 7, 118, 0.7), black);
+bottom: 0%;
+transition: 3s;
+}
+.card3-zomb:hover.card3-zomb::after {
+transform: translateY(100%);
+}
+.card3-zomb:hover.card3-zomb::before {
+transform: translateY(-100%);
+}
+
+.cards-zomb1 button{
+    position: absolute;
+    margin-left: 100px;
+    margin-right: auto;
+    margin-top: 200px;
+    background-color: transparent;
+    color: white;
+    font-family: cursive;
+    border: 1px solid black;
+    opacity: 0;
+    position: relative;
+    padding: 10px;
+    border-radius: 10px;
+}
+.cards-zomb1 button:hover{
+    opacity: 1;
+    color: white;
+    background-color: rgba(247, 7, 118, 0.7);
+}
